@@ -12,7 +12,7 @@ public class CustomizableCharacter : MonoBehaviour
 
     // This is where the spritesheets go
     // In the inspector, set the size to, for example 5, if you have 5 spritesheets
-    // Then open each individual element and add the individual sprites from the spritesheets in here
+    // Then open your sprite sheet and add EACH INDIVIDUAL SPRITE in here
     // This means if your spritesheet has 10 frames, the Sprites element in the inspector needs to contain these 10 sprites
     // Might not be the most optimal solution for this problem but it works.
     
