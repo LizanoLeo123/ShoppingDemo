@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
-    private Vector2 moveDirection = Vector2.zero;
+    [HideInInspector] public Vector2 moveDirection = Vector2.zero; //Need to get the facing direction on the interaction system
 
     void Update()
     {

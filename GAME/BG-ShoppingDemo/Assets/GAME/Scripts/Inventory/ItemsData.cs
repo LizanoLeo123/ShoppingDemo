@@ -12,7 +12,6 @@ public class ItemsData : ScriptableObject
     {
         foreach (Item item in itemsInfo)
         {
-            Debug.Log(item.name);
             if (item.name == name)
             {
                 return item.sprite;
