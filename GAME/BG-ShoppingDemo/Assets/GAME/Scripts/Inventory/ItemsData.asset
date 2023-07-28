@@ -17,11 +17,14 @@ MonoBehaviour:
     itemType: 0
     amount: 1
     sprite: {fileID: 21300000, guid: 9c5f75faa4c63d4499e6694da108de76, type: 3}
+    price: 3
   - name: Adventurer Clothing
     itemType: 2
     amount: 1
     sprite: {fileID: -1156877420, guid: bb0401f05f772af4383484b8ec954738, type: 3}
+    price: 5
   - name: Mage Clothing
     itemType: 2
     amount: 1
     sprite: {fileID: -776528811, guid: 6d2f306f4ae9b3f449e5cee1cfd0d277, type: 3}
+    price: 5

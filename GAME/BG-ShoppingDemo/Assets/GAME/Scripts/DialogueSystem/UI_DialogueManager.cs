@@ -60,7 +60,7 @@ public class UI_DialogueManager : MonoBehaviour
     public void OnDialogueFinish()
     {
         Sequence mySequence = DOTween.Sequence();
-        mySequence.Append(dialogueBox.transform.DOMove(new Vector3(Screen.width/2, -373, 0), 1f));
+        mySequence.Append(dialogueBox.transform.DOMove(new Vector3(Screen.width/2, -385, 0), 1f));
         mySequence.Play();
         isHidden = true;
     }

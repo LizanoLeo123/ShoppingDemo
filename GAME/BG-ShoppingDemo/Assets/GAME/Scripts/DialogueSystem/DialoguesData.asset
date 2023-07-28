@@ -25,7 +25,7 @@ MonoBehaviour:
     text: Good morning! My name is Kiara!
   - id: 2
     character: {fileID: 1839950191, guid: 3a8252cb877deb74499732a7bfb3f7ad, type: 3}
-    nextDialogue: -1
+    nextDialogue: 3
     name: Kiara
     text: What do you need?
   - id: 3

@@ -44,6 +44,7 @@ public class UI_Inventory : MonoBehaviour
             newItem.SetActive(true);
             newItem.transform.GetChild(0).Find("ItemIcon").GetComponent<Image>().sprite = _itemsData.GetItemSprite(item.name);
         }
+        currencyLabel.text = inventory.GetMoney().ToString();
     }
 
     public void ShowHideInventory()
@@ -52,13 +53,13 @@ public class UI_Inventory : MonoBehaviour
         Sequence mySequence = DOTween.Sequence();
         if (isHidden)
         {
-            mySequence.Append(inventoryPanel.DOMove(new Vector3(360, yValue, 0), .5f));
-            mySequence.Append(inventoryPanel.DOMove(new Vector3(344, yValue, 0), .7f));
+            mySequence.Append(inventoryPanel.DOMove(new Vector3(inventoryPanel.position.x + 680, inventoryPanel.position.y, 0), .5f));
+            mySequence.Append(inventoryPanel.DOMove(new Vector3(inventoryPanel.position.x + 664, inventoryPanel.position.y, 0), .7f));
         }
         else
         {
-            mySequence.Append(inventoryPanel.DOMove(new Vector3(360, yValue, 0), .5f));
-            mySequence.Append(inventoryPanel.DOMove(new Vector3(-323, yValue, 0), .7f));
+            mySequence.Append(inventoryPanel.DOMove(new Vector3(inventoryPanel.position.x + 16, inventoryPanel.position.y, 0), .5f));
+            mySequence.Append(inventoryPanel.DOMove(new Vector3(inventoryPanel.position.x - 664, inventoryPanel.position.y, 0), .7f));
         }
         mySequence.Play();
         isHidden = !isHidden;

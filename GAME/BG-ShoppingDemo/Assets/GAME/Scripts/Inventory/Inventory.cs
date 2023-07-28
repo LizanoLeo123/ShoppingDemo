@@ -12,16 +12,20 @@ public class Inventory
 
     public Inventory() { 
         itemList = new List<Item>();
-        AddItem(new Item { name = "Coal", itemType = Item.ItemType.SimpleItem, amount = 1});
-        AddItem(new Item { name = "Adventurer Clothing", itemType = Item.ItemType.Clothing, amount = 1 });
-        AddItem(new Item { name = "Mage Clothing", itemType = Item.ItemType.Clothing, amount = 1 });
-        AddMoney(50);
-        Debug.Log(itemList.Count);
+        //AddItem(new Item { name = "Coal", itemType = Item.ItemType.SimpleItem, amount = 1});
+        //AddItem(new Item { name = "Adventurer Clothing", itemType = Item.ItemType.Clothing, amount = 1 });
+        //AddItem(new Item { name = "Mage Clothing", itemType = Item.ItemType.Clothing, amount = 1 });
     }
 
     public void AddItem(Item item)
     {
         itemList.Add(item);
+        OnItemsListChanged?.Invoke(this, EventArgs.Empty);
+    }
+
+    public void QuitItem(Item item)
+    {
+        itemList.Remove(item);
         OnItemsListChanged?.Invoke(this, EventArgs.Empty);
     }
 
