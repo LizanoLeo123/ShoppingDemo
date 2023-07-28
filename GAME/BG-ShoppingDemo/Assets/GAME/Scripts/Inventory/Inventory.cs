@@ -39,5 +39,8 @@ public class Inventory
         return money;
     }
 
-    public void AddMoney(int value) { money += value; }
+    public void AddMoney(int value) { 
+        money += value;
+        OnItemsListChanged?.Invoke(this, EventArgs.Empty);
+    }
 }
