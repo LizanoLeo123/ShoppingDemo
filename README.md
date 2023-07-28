@@ -9,11 +9,13 @@ In the Builds folder, unzip the file and play the executable application.
 ## Summary
 
 For this project I set up the basic folders structure I usually like to use for Unity projects
+
 GAME FOLDER
  - Scripts
  - Prefabs
  - Sprites
  - Etc
+ - 
 Plugins
 ETC
 
@@ -31,7 +33,7 @@ Get Back to Main Menu and you might notice something different. I used Player Pr
 **Not all code use the most professional and optimal solutions for this problem** due to time limitation but everything works, If it's dumb but it works, then it's not dumb.
 All systems functionality is stored in their own folders and there are may comments within the code to clarify some stuff.
 
-Not all code was made by me. I user youtube tutorials for the Tilemaps (Brackeys), Customizable Character () , Inventory (Code Monkey), etc.
+Not all code was made by me. I user youtube tutorials for the Tilemaps (Brackeys), Customizable Character (Ken "GoldenEvolution" on YT) , Inventory (Code Monkey), etc.
 
 IMPORTANT THINGS TO NOTICE
 All level Dialogues are saved on a Scriptable object called DialoguesData. -> Scripts/DialogueSystem
