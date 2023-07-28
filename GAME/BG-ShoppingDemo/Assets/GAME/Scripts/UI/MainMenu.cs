@@ -32,4 +32,9 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("skin", 0);
         playerImage.sprite = skins[0];
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
