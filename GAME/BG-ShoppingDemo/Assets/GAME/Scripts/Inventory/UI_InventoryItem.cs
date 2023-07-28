@@ -23,6 +23,14 @@ public class UI_InventoryItem : MonoBehaviour
         itemOptions.gameObject.SetActive(showingOptions);
     }
 
+    public void EquipItem()
+    {
+        if(currentItem.itemType == Item.ItemType.Clothing)
+        {
+
+        }
+    }
+
     public void HideOptions()
     {
         showingOptions = false;

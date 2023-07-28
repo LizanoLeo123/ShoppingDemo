@@ -42,6 +42,7 @@ public class UI_Inventory : MonoBehaviour
             // Here I would check if itemas are stackable and make a label to update the amount of items I have or just instantiate another slot if the item is not stackable.
             GameObject newItem = Instantiate(itemSlotTemplate, itemSlotContainer);
             newItem.SetActive(true);
+            newItem.GetComponent<UI_InventoryItem>().currentItem = item;
             newItem.transform.GetChild(0).Find("ItemIcon").GetComponent<Image>().sprite = _itemsData.GetItemSprite(item.name);
         }
         currencyLabel.text = inventory.GetMoney().ToString();
