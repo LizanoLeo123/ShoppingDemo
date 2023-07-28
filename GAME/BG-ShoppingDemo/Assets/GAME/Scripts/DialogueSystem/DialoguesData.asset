@@ -32,4 +32,19 @@ MonoBehaviour:
     character: {fileID: -1114651733, guid: 5221a7846a4fc0e4384f8dd2ac61fb12, type: 3}
     nextDialogue: -1
     name: Me
+    text: I need more money to get the clothes
+  - id: 4
+    character: {fileID: 1839950191, guid: 3a8252cb877deb74499732a7bfb3f7ad, type: 3}
+    nextDialogue: 5
+    name: Kiara
+    text: Welcome again
+  - id: 5
+    character: {fileID: 1839950191, guid: 3a8252cb877deb74499732a7bfb3f7ad, type: 3}
+    nextDialogue: 6
+    name: Kiara
+    text: What do you need?
+  - id: 6
+    character: {fileID: -1114651733, guid: 5221a7846a4fc0e4384f8dd2ac61fb12, type: 3}
+    nextDialogue: -1
+    name: Me
     text: Thank you!
