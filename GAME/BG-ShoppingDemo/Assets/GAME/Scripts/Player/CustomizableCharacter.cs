@@ -19,8 +19,7 @@ public class CustomizableCharacter : MonoBehaviour
     public Skins[] skins;
     SpriteRenderer spriteRenderer;
 
-    // This spriteNr is helpful to easily add more accessories using the CustomizableAccessories.cs script
-    public int spriteNr;
+    private  int spriteNr;
 
     void Start()
     {
@@ -62,6 +61,25 @@ public class CustomizableCharacter : MonoBehaviour
     public void SkinMin()
     {
         skinNr--;
+    }
+
+    //This should be done by ID referencing a scriptable object with references for wich item is which skin, but this is easier for this prototype
+    public void SetSkin(string name) 
+    {
+        switch(name)
+        {
+            case "Adventurer Clothing":
+                skinNr = 1;
+            break;
+
+            case "Mage Clothing":
+                skinNr = 2;
+                break;
+
+            default: //Nude
+                skinNr = 0;
+                break;
+        }
     }
 }
 

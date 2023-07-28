@@ -11,7 +11,7 @@ public class PlayerInventory : MonoBehaviour
     {
         inventory = new Inventory();
         inventory.AddItem(new Item { name = "Coal", itemType = Item.ItemType.SimpleItem, amount = 1, price = 3 });
-        inventory.AddMoney(3);
+        //inventory.AddMoney(3);
         uiInventory.SetInventory(inventory);
     }
 }

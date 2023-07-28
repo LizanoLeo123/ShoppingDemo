@@ -23950,7 +23950,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1117574487}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1170607013}
+        m_TargetAssemblyTypeName: UI_InventoryItem, Assembly-CSharp
+        m_MethodName: EquipItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1117574487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40071,7 +40083,6 @@ MonoBehaviour:
     - {fileID: -2088251398, guid: ce8225cc8d3c06d429f36a0851ee88a5, type: 3}
     - {fileID: 648856007, guid: ce8225cc8d3c06d429f36a0851ee88a5, type: 3}
     - {fileID: -653203579, guid: ce8225cc8d3c06d429f36a0851ee88a5, type: 3}
-  spriteNr: 0
 --- !u!1 &1397427750
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,6 +29,11 @@ public class UI_Inventory : MonoBehaviour
         RefreshInventoryItems();
     }
 
+    private void OnEnable()
+    {
+        if(inventory != null) RefreshInventoryItems();
+    }
+
     private void RefreshInventoryItems()
     {
         //Clean old inventory

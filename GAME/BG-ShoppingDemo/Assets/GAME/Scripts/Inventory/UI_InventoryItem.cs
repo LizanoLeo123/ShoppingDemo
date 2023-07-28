@@ -27,7 +27,8 @@ public class UI_InventoryItem : MonoBehaviour
     {
         if(currentItem.itemType == Item.ItemType.Clothing)
         {
-
+            //I should call an CharacterCustomization instance to do this, but I let the void public to call it from here
+            GameObject.Find("Player").transform.Find("Visuals").GetComponent<CustomizableCharacter>()?.SetSkin(currentItem.name); //Safe call by the way
         }
     }
 
