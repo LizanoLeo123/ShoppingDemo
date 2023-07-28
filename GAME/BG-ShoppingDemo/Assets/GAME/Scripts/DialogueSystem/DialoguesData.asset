@@ -48,3 +48,13 @@ MonoBehaviour:
     nextDialogue: -1
     name: Me
     text: Thank you!
+  - id: 7
+    character: {fileID: -1114651733, guid: 5221a7846a4fc0e4384f8dd2ac61fb12, type: 3}
+    nextDialogue: 8
+    name: Me
+    text: OH NO! I'M NAKED!
+  - id: 8
+    character: {fileID: -1114651733, guid: 5221a7846a4fc0e4384f8dd2ac61fb12, type: 3}
+    nextDialogue: -1
+    name: Me
+    text: I can't go anywhere like this! I'll get some clothes at the shop

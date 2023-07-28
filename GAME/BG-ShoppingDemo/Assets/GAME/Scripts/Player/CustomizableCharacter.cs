@@ -70,7 +70,7 @@ public class CustomizableCharacter : MonoBehaviour
         {
             case "Adventurer Clothing":
                 skinNr = 1;
-            break;
+                break;
 
             case "Mage Clothing":
                 skinNr = 2;
@@ -80,6 +80,7 @@ public class CustomizableCharacter : MonoBehaviour
                 skinNr = 0;
                 break;
         }
+        PlayerPrefs.SetInt("skin", skinNr);
     }
 }
 

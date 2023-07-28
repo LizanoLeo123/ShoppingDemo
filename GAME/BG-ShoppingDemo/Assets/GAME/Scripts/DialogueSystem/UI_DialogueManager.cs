@@ -12,6 +12,7 @@ public class UI_DialogueManager : MonoBehaviour
     public GameObject dialogueBox;
     public TMP_Text characterName;
     public TMP_Text dialogueText;
+    public Sprite[] skins;
     [HideInInspector] public bool isHidden = true;
     //public float xValue;
 
@@ -22,7 +23,17 @@ public class UI_DialogueManager : MonoBehaviour
         currentDialogue = levelDialogues.GetDialogue(id);
         if (currentDialogue != null)
         {
-            characterSprite.sprite = currentDialogue.character;
+            if(currentDialogue.name == "Me")
+            {
+                if(PlayerPrefs.GetInt("skin") != 0)
+                {
+                    characterSprite.sprite = skins[PlayerPrefs.GetInt("skin")];
+                }
+                else
+                    characterSprite.sprite = skins[0];
+            }
+            else
+                characterSprite.sprite = currentDialogue.character;
             characterName.text = currentDialogue.name;
             dialogueText.text = currentDialogue.text;
         }
@@ -52,7 +63,7 @@ public class UI_DialogueManager : MonoBehaviour
     public void OnDialogueStart()
     {
         Sequence mySequence = DOTween.Sequence();
-        mySequence.Append(dialogueBox.transform.DOMove(new Vector3(Screen.width/2, 162, 0), 1f));
+        mySequence.Append(dialogueBox.transform.DOMove(new Vector3(Screen.width/2, 192, 0), 1f));
         mySequence.Play();
         isHidden = false;
     }

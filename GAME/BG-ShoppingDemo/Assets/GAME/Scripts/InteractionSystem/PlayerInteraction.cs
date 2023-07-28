@@ -13,7 +13,13 @@ public class PlayerInteraction : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
-            if(canInteract) Interact();
+            if(canInteract)
+            {
+                if(FindObjectOfType<UI_DialogueManager>().isHidden) //Can only interact if there is no dialogues open
+                {
+                    Interact();
+                }
+            }
         }
     }
 
@@ -32,15 +38,6 @@ public class PlayerInteraction : MonoBehaviour
                 //Debug.Log("Found " + interactHit.collider.transform.name);
                 interactHit.collider.gameObject.GetComponent<InteractableObject>()?.TriggerInteract();
             }
-            //else //First try up if it didn't work try down, might change this later
-            //{
-            //    if (direction.x == 0 && direction.y == 0) direction = Vector3.down; //Interact up and down if player is not moving
-            //    interactHit = Physics2D.Raycast(transform.position, direction, interactDistance, interactableLayer);
-            //    if (interactHit.collider != null)
-            //    {
-            //        interactHit.collider.gameObject.GetComponent<InteractableObject>()?.TriggerInteract();
-            //    }
-            //}
 
             StartCoroutine(InteractCooldown());
         }

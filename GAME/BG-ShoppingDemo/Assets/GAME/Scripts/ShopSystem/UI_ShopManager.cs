@@ -23,12 +23,16 @@ public class UI_ShopManager : MonoBehaviour
 
 
     private Inventory shopInventory;
-    
+    private Vector3 inventoryOriginalPosition;
+    private Vector3 shopOriginalPosition;
+
     private int currentTaps = 0;
     private bool listeningTaps = false;
 
     private void Start()
     {
+        inventoryOriginalPosition = inventoryPanel.transform.position;
+        shopOriginalPosition = shopPanel.transform.position;
         playerInventory = FindObjectOfType<PlayerInventory>()?.inventory;
         shopInventory = new Inventory();
         shopInventory.AddItem(new Item { name = "Adventurer Clothing", itemType = Item.ItemType.Clothing, amount = 1, price = 5 });
@@ -162,7 +166,9 @@ public class UI_ShopManager : MonoBehaviour
     private void HideStore()
     {
         playerInventoryPanel.SetActive(true);
-        shopPanel.DOMove(new Vector3(shopPanel.position.x, shopPanel.position.y + 400, 0), 1f);
-        inventoryPanel.DOMove(new Vector3(inventoryPanel.position.x, inventoryPanel.position.y + 400, 0), 1f);
+        //shopPanel.DOMove(new Vector3(shopPanel.position.x, shopPanel.position.y + 400, 0), 1f);
+        //inventoryPanel.DOMove(new Vector3(inventoryPanel.position.x, inventoryPanel.position.y + 400, 0), 1f);
+        shopPanel.DOMove(shopOriginalPosition, 1f);
+        inventoryPanel.DOMove(inventoryOriginalPosition, 1f);
     }
 }

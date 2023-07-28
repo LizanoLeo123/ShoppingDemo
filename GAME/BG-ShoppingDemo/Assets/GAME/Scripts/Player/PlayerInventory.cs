@@ -9,6 +9,7 @@ public class PlayerInventory : MonoBehaviour
     
     private void Awake()
     {
+        PlayerPrefs.SetInt("skin", 0); //When getting in game set the player nude
         inventory = new Inventory();
         inventory.AddItem(new Item { name = "Coal", itemType = Item.ItemType.SimpleItem, amount = 1, price = 3 });
         //inventory.AddMoney(3);
