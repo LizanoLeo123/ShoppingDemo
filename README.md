@@ -15,7 +15,7 @@ GAME FOLDER
  - Prefabs
  - Sprites
  - Etc
- - 
+
 Plugins
 ETC
 
