@@ -26,3 +26,6 @@ Not all code was made by me. I use youtube tutorials for the Tilemaps (Brackeys)
 **IMPORTANT THINGS TO NOTICE**
 All level Dialogues are saved on a Scriptable object called DialoguesData. -> Scripts/DialogueSystem
 All Game Items are saved on a Scriptable Object called ItemsData. -> Scripts/Inventory
+
+I use SourceTree to manage my repositories and the final version of the project look like this
+![image](https://github.com/LizanoLeo123/ShoppingDemo/assets/26804692/6a9c82d8-8f44-4d94-999b-57bc69720879)
